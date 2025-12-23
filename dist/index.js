@@ -24,13 +24,13 @@ const tools = [
             properties: {
                 chain: {
                     type: 'string',
-                    description: 'Filter by blockchain (ethereum, base, arbitrum, polygon, avalanche, bsc, optimism, zksync, mantle, solana, sui, aptos)',
-                    enum: ['ethereum', 'base', 'arbitrum', 'polygon', 'avalanche', 'bsc', 'optimism', 'zksync', 'mantle', 'solana', 'sui', 'aptos'],
+                    description: 'Filter by blockchain',
+                    enum: ['ethereum', 'arbitrum', 'avalanche', 'base', 'bsc', 'celo', 'linea', 'mantle', 'optimism', 'polygon', 'zksync', 'solana', 'sui', 'aptos', 'near', 'ton', 'tron', 'stellar', 'xrpl', 'algorand', 'hedera', 'sei', 'fraxtal', 'ink', 'plume'],
                 },
                 type: {
                     type: 'string',
-                    description: 'Filter by asset type (us-treasury, money-market, stablecoin, lst, wrapped, rwa-misc)',
-                    enum: ['us-treasury', 'money-market', 'stablecoin', 'lst', 'wrapped', 'rwa-misc'],
+                    description: 'Filter by asset category',
+                    enum: ['us-treasury', 'stablecoin', 'money-market', 'commodity', 'equity', 'non-us-debt', 'corporate-bond', 'private-credit', 'structured-credit', 'real-estate'],
                 },
             },
         },
@@ -138,7 +138,7 @@ const tools = [
                 chain: {
                     type: 'string',
                     description: 'Filter by specific chain (optional)',
-                    enum: ['ethereum', 'base', 'arbitrum', 'polygon', 'avalanche', 'bsc', 'optimism', 'zksync', 'mantle', 'solana', 'sui', 'aptos'],
+                    enum: ['ethereum', 'arbitrum', 'avalanche', 'base', 'bsc', 'celo', 'linea', 'mantle', 'optimism', 'polygon', 'zksync', 'solana', 'sui', 'aptos', 'near', 'ton', 'tron', 'stellar', 'xrpl', 'algorand', 'hedera', 'sei', 'fraxtal', 'ink', 'plume'],
                 },
             },
         },
@@ -269,7 +269,7 @@ async function fetchAPI(endpoint) {
 function createServer() {
     const server = new index_js_1.Server({
         name: 'rwapipe-mcp',
-        version: '0.3.0',
+        version: '0.3.1',
     }, {
         capabilities: {
             tools: {},
@@ -613,7 +613,7 @@ async function startSSEServer() {
             res.writeHead(200, { 'Content-Type': 'application/json' });
             res.end(JSON.stringify({
                 name: 'rwapipe-mcp',
-                version: '0.3.0',
+                version: '0.3.1',
                 description: 'RWA Pipe MCP Server - Connect AI agents to Real World Asset data',
                 endpoints: {
                     sse: '/sse',

@@ -1,6 +1,6 @@
 {
   "name": "rwapipe-mcp",
-  "version": "0.3.0",
+  "version": "0.3.1",
   "description": "MCP Server for Real World Asset data - Connect AI agents to tokenized treasury and RWA data",
   "main": "dist/index.js",
   "bin": {
