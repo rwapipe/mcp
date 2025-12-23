@@ -35,10 +35,10 @@
   "homepage": "https://rwapipe.com",
   "repository": {
     "type": "git",
-    "url": "https://github.com/RWAPIpe/mcp.git"
+    "url": "https://github.com/rwapipe/mcp.git"
   },
   "bugs": {
-    "url": "https://github.com/RWAPIpe/mcp/issues"
+    "url": "https://github.com/rwapipe/mcp/issues"
   },
   "dependencies": {
     "@modelcontextprotocol/sdk": "^1.0.0",
