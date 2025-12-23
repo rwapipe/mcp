@@ -1,0 +1,55 @@
+{
+  "name": "rwapipe-mcp",
+  "version": "0.3.0",
+  "description": "MCP Server for Real World Asset data - Connect AI agents to tokenized treasury and RWA data",
+  "main": "dist/index.js",
+  "bin": {
+    "rwapipe-mcp": "./dist/index.js"
+  },
+  "files": [
+    "dist",
+    "README.md"
+  ],
+  "scripts": {
+    "dev": "tsx watch src/index.ts",
+    "build": "tsc",
+    "start": "node dist/index.js",
+    "typecheck": "tsc --noEmit",
+    "prepublishOnly": "npm run build"
+  },
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "rwa",
+    "real-world-assets",
+    "tokenized-assets",
+    "treasury",
+    "defi",
+    "blockchain",
+    "ai",
+    "claude",
+    "anthropic"
+  ],
+  "author": "RWA Pipe <info@rwapipe.com>",
+  "license": "MIT",
+  "homepage": "https://rwapipe.com",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/RWAPIpe/mcp.git"
+  },
+  "bugs": {
+    "url": "https://github.com/RWAPIpe/mcp/issues"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.0.0",
+    "zod": "^3.22.4"
+  },
+  "devDependencies": {
+    "@types/node": "^20.10.0",
+    "typescript": "^5.3.0",
+    "tsx": "^4.7.0"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  }
+}
